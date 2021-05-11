@@ -1,0 +1,95 @@
+body {
+  font-family: Roboto, sans-serif;
+}
+
+.App {
+  max-width: 350px;
+  margin: 1em;
+  padding: 1em;
+  border: 1px solid #1f1f1f;
+}
+
+h2 {
+  margin: 0 0 1em;
+  text-align: center;
+}
+
+.xm-folder--list {
+  display: block;
+  margin: 0 0 10px;
+  padding: 0 0 0 1em;
+  position: relative;
+}
+
+.xm-folder--single {
+  list-style: none;
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: 14px 0 0;
+}
+
+.xm-folder--title {
+  padding-left: 23px;
+}
+
+.xm-folder--title::before {
+  content: '';
+  height: 8px;
+  width: 16px;
+  background: #f9e628;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 6px;
+}
+.xm-folder--title::after {
+  content: '';
+  height: 3px;
+  width: 8px;
+  background: #f5bd00;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 4px;
+}
+.xm-folder--title-nodata {
+  padding: 0;
+  font-size: 12px;
+  margin: 0;
+}
+.xm-folder--title-nodata::before,
+.xm-folder--title-nodata::after {
+  display: none;
+}
+
+.xm-folder--close {
+  display: block;
+  height: 1em;
+  width: 1em;
+  text-align: center;
+  font-size: 12px;
+  line-height: 1em;
+  color: #3f51b5;
+  border: 1px solid #3F51B5;
+  border-radius: 100%;
+  margin-left: 16px;
+  cursor: pointer;
+  margin: 0 0 0 10px;
+}
+
+.xm-folder--new {
+  float: right;
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+
+.xm-folder--new input {
+  width: 30px;
+}

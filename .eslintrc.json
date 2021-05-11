@@ -1,0 +1,28 @@
+{
+	"root": true,
+	"env": {
+		"browser": true,
+		"es6": true,
+		"node": true
+	},
+	"globals": {
+		"es6": true
+	},
+	"rules": {
+		"camelcase": 0,
+		"curly": 0,
+		"indent": [
+			"error",
+			"tab"
+		],
+		"eqeqeq": 1,
+		"max-len": 0,
+		"no-console": 1,
+		"no-alert": 0,
+		"jsdoc/require-param": 0,
+		"jsdoc/require-param-type": 0,
+		"linebreak-style": 0
+	},
+	"parser": "@typescript-eslint/parser",
+	"plugins": ["@typescript-eslint"]
+}
