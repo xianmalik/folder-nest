@@ -1,18 +1,17 @@
 import React from 'react'
 import FolderList from './components/FolderList'
-
-import FolderData from './data/folderdata.json'
+import { useFolderStore } from './store/useFolderStore'
 
 import './App.css'
 
 function App() {
-	const [ data, setData ] = React.useState( FolderData )
+	const { folders } = useFolderStore()
 
 	const props_data = {
-		data: data,
+		data: folders,
 		id: 'root-folder'
 	}
-	
+
 	return (
 		<div className='App'>
 			<h2>Folder Structure</h2>
