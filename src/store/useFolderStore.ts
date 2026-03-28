@@ -1,4 +1,5 @@
 import { create } from 'zustand'
+import { persist } from 'zustand/middleware'
 import FolderData from '../data/folderdata.json'
 
 interface FolderState {
@@ -9,7 +10,7 @@ interface FolderState {
   updateFolder: (id: string, updates: Partial<Data>) => void
 }
 
-export const useFolderStore = create<FolderState>((set) => ({
+export const useFolderStore = create<FolderState>()(persist((set) => ({
   folders: FolderData,
   
   setFolders: (folders) => set({ folders }),
@@ -79,4 +80,4 @@ export const useFolderStore = create<FolderState>((set) => ({
     
     return { folders: updateInFolders(state.folders) }
   })
-}))
+}), { name: 'folder-nest' }))

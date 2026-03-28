@@ -63,31 +63,52 @@ h2 {
   display: none;
 }
 
-.xm-folder--close {
-  display: block;
-  height: 1em;
-  width: 1em;
-  text-align: center;
-  font-size: 12px;
-  line-height: 1em;
-  color: #3f51b5;
-  border: 1px solid #3F51B5;
-  border-radius: 100%;
-  margin-left: 16px;
-  cursor: pointer;
-  margin: 0 0 0 10px;
+.xm-folder--actions {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: auto;
+  flex-shrink: 0;
 }
 
-.xm-folder--new {
-  float: right;
-  background: transparent;
+.xm-folder--add,
+.xm-folder--close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 16px;
+  width: 16px;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
   border: none;
-  outline: none;
+  border-radius: 50%;
   cursor: pointer;
-  position: absolute;
-  top: 0;
-  right: 0;
+  flex-shrink: 0;
+  transition: background-color 0.15s ease, transform 0.15s ease;
+  padding: 0;
 }
+
+.xm-folder--add {
+  background-color: #e8e8e8;
+  color: #444;
+}
+
+.xm-folder--add:hover {
+  background-color: #d4d4d4;
+  transform: scale(1.15);
+}
+
+.xm-folder--close {
+  color: #fff;
+  background-color: #e53935;
+}
+
+.xm-folder--close:hover {
+  background-color: #b71c1c;
+  transform: scale(1.15);
+}
+
 
 
 .xm-folder--new input {
